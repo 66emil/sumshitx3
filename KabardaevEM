@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main() {
+    int n, k;
+    int a, m = 1e9;
+    std::cin >> n >> k;
+    for(int i = 0; i < n; i++) {
+        std::cin >> a;
+        if(k % a == 0) {
+            m = std::min(m, k/a);
+        }
+    }
+    std::cout << m;
+    return 0;
+}
