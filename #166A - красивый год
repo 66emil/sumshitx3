@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main() {
+    int s, x = 1000;
+    std::cin >> s;
+    while (true) {
+        x += 1;
+        if (x > s and (((x % 10 != ((x % 100) / 10)) and (x % 10 != ((x % 1000) / 100)) and (x % 10 != (x / 1000))) and \
+            ((((x % 1000) / 100) != ((x % 100) / 10)) and (x / 1000 != ((x % 1000) / 100))) and (((x % 100) / 10) != x / 1000))) {
+            if(x > 1000 and x < 10000) {
+                std::cout << x;
+                break;
+        }
+        }
+    }
+}
