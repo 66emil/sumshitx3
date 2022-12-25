@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    int t, n;
+    cin >> t;
+    for(int i = 0; i < t; ++i){
+        cin >> n;
+        vector<int> a;
+        int k = 0;
+        while(n){
+            a.push_back(n % 10);
+            n/=10;
+            if(a[a.size() - 1] == 0)
+                ++k;
+        }
+        cout << a.size() - k << endl;
+        reverse(a.begin(), a.end());
+        for(int i = 0; i < a.size(); ++i){
+            if(a[i] != 0)
+                cout << a[i] * pow(10, a.size() - i - 1) << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
