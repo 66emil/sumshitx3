@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main()
+{
+    int f, t, n, k, s = INT_MIN;
+    std::cin >> n >> k;
+    while(n--){
+        std::cin >> f >> t;
+        if(k < t)
+            f -= t - k;
+        s = std::max(s, f);
+    }
+    std::cout << s;
+}
